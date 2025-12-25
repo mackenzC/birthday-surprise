@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>You've Got Mail!</title>
+</head>
+<body>
+    <div class="candle">
+        <img src="candle.png" alt="candle">
+        <div class="candle-wick"></div>
+        <div class="fire"></div>
+        <div class="smoke"></div>
+    </div>
+    <div class="container">
+        <div class="package">messenger</div>
+    </div>
+
+    <div class="modal">
+        <div class="modal-content">
+            <h2>Please confirm your details</h2>
+            <form id = "birthdayForm">
+                <input type="text" id="name" placeholder="Sign Here" required>
+                <input type="number" id="birthday" placeholder="How old will you be turning?">
+                <button type="button" id="confirmBtn" disabled>Confirm</button>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
