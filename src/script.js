@@ -65,4 +65,6 @@ function fireConfetti() {
     });
 }
 
-confettiBtn.addEventListener('click', fireConfetti);
+if (confettiBtn) {
+    confettiBtn.addEventListener('click', fireConfetti);
+}
