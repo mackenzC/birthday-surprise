@@ -1,5 +1,5 @@
 const params = new URLSearchParams(window.location.search);
-const nameInput = params.get('name').toUpperCase();
+const nameInput = params.get('name')?.toUpperCase();
 const ageInput = params.get('age');
 
 const titleText = nameInput ? `Happy Birthday, ${nameInput}!`:'Happy Birthday!';
