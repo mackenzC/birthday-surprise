@@ -2,7 +2,14 @@ html {
     overflow: hidden;
     padding-left: 40px;
     padding-right: 40px;
-    background-color: lightcyan;
+}
+
+body {
+    background: linear-gradient(45deg, #e0f7ff 25%, transparent 25%, transparent 75%, #e0f7ff 75%, #e0f7ff),
+    linear-gradient(45deg, #e0f7ff 25%, transparent 25%, transparent 75%, #e0f7ff 75%, #e0f7ff);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    background-color: #b3e5fc;
 }
 
 canvas {
@@ -13,7 +20,7 @@ canvas {
 }
 
 h2 {
-    font-size: 9vw;
+    font-size: 90px;
     font-family: "Jersey 10", sans-serif;
     text-align: center;
     margin-bottom: -150px;
@@ -22,18 +29,19 @@ h2 {
 }
 
 button {
-    font-size: 5vw;
+    font-size: 80px;
     position: absolute;
     bottom: 30px;
-    right: 20px;
+    left: 20px;
     background: transparent;
     border: none;
     cursor: pointer;
     z-index: 2;
+    transition: transform 0.2s ease-in-out;
 }
 
 button:hover {
-    transform: scale(1.5);
+    transform: scale(1.3);
 }
 
 span {
