@@ -70,3 +70,12 @@ fireConfetti();
 if (confettiBtn) {
     confettiBtn.addEventListener('click', fireConfetti);
 }
+
+
+// Lighter button
+const lighterBtn = document.getElementById('lighter-btn');
+if (lighterBtn) {
+    lighterBtn.addEventListener('click', () => {
+        window.dispatchEvent(new Event('relightCandles'));
+    });
+}

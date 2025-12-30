@@ -1,7 +1,7 @@
 html {
     overflow: hidden;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 body {
@@ -16,7 +16,7 @@ canvas {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 1;
 }
 
 h2 {
@@ -24,15 +24,26 @@ h2 {
     font-family: "Jersey 10", sans-serif;
     text-align: center;
     margin-bottom: -150px;
-    
-    z-index: 1;
+    color:rgb(0, 174, 255);    
 }
 
-button {
+#confetti-btn {
     font-size: 80px;
     position: absolute;
-    bottom: 30px;
-    left: 20px;
+    bottom: 50px;
+    left: 50px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    transition: transform 0.2s ease-in-out;
+}
+
+#lighter-btn {
+    font-size: 80px;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
     background: transparent;
     border: none;
     cursor: pointer;
