@@ -2,6 +2,20 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import cakeUrl from './assets/cake.glb?url';
 import { startMicrophoneDetection } from './audio';
+import { hideLoadingScreen } from './script.js';
+
+// loading
+const loadingManager = new THREE.LoadingManager();
+
+loadingManager.onProgress =  ( url, itemsLoaded, itemsTotal ) => {
+    console.log( 'Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+}
+
+loadingManager.onLoad =  () => {
+    console.log( 'Loading complete!');
+    hideLoadingScreen();
+};
+
 
 const params = new URLSearchParams(window.location.search);
 const numCandles = params.get('age') ? parseInt(params.get('age')) : 5;
@@ -144,7 +158,8 @@ let cake;
 let isLoaded = false;
 let loaderProgress = 0;
 
-const loader = new GLTFLoader();
+const loader = new GLTFLoader(loadingManager);
+loaderProgress = performance.now();
 loader.load(
     cakeUrl,
     function (gltf) {

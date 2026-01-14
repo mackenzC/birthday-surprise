@@ -11,12 +11,17 @@
     <title>Happy Birthday!</title>
 </head>
 <body>
+    <div id="loading-screen">
+        <div id="loading-text">Loading...</div>
+        <!-- maybe replace with a quick cake creating animation -->
+    </div>
+
     <h2 id="birthday-message">Happy Birthday!</h2>
     <button id="confetti-btn" title="Confettiiii~">🎉</button>
     <button id="lighter-btn" title="Relight the candles">🕯️</button>
 
     <!-- confetti library -->
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script type="module" src="/src/three.js"></script>
     <script type="module" src="/src/audio.js"></script>
     <script type="module" src="/src/script.js"></script>

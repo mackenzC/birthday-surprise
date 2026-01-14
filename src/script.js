@@ -24,7 +24,6 @@ if (nameInput && ageInput) {
     messageElement.textContent = 'Happy Birthday!';
 }   
 
-
 // Confetti effect
 const confettiBtn = document.getElementById('confetti-btn');
 
@@ -78,4 +77,10 @@ if (lighterBtn) {
     lighterBtn.addEventListener('click', () => {
         window.dispatchEvent(new Event('relightCandles'));
     });
+}
+
+// Loading screen stuff
+const loadingScreen = document.getElementById('loading-screen');
+export function hideLoadingScreen() {
+    loadingScreen.classList.add('hidden');
 }
