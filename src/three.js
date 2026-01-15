@@ -107,7 +107,7 @@ for (let i = 0; i < numCandles; i++) {
     const candle = new THREE.Mesh(candleGeometry, mat);
     const angle = (i / numCandles) * Math.PI * 2;
     const radius = 0.7;
-    candle.position.set(Math.cos(angle) * radius, 0.25, Math.sin(angle) * radius);
+    candle.position.set(Math.cos(angle) * radius, 0.5, Math.sin(angle) * radius);
     cakeGroup.add(candle);
 
     const outline = new THREE.Mesh(candleGeometry, outlineMaterial);
@@ -165,7 +165,7 @@ loader.load(
     function (gltf) {
         cake = gltf.scene;
         cakeGroup.add(cake);
-        cake.position.set(0, -0.5, 0);
+        cake.position.set(0, -0.3, 0);
         cake.scale.set(size, size, size);
         // console.log('Cake loaded successfully', cake.position);
     },

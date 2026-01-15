@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "circletype": "^2.3.0",
     "three": "^0.182.0"
   },
   "devDependencies": {

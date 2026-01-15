@@ -1,3 +1,5 @@
+import CircleType from "circletype";
+
 const params = new URLSearchParams(window.location.search);
 const nameInput = params.get('name')?.toUpperCase();
 const ageInput = params.get('age');
@@ -24,11 +26,29 @@ if (nameInput && ageInput) {
     messageElement.textContent = 'Happy Birthday!';
 }   
 
+const circle = new CircleType(messageElement);
+circle.radius(500);
+
+
 // Confetti effect
 const confettiBtn = document.getElementById('confetti-btn');
+const confettiSound1 = new Audio(new URL('./assets/confetti1.mp3', import.meta.url));
+const confettiSound2 = new Audio(new URL('./assets/confetti2.mp3', import.meta.url));
 
+confettiSound1.volume = 0.5;
+confettiSound2.volume = 0.5;
+
+function playConfettiSound() {
+    const randomChoice = Math.random() < 0.5 ? confettiSound1 : confettiSound2;
+    randomChoice.currentTime = 0;
+    randomChoice.play().catch((error) => {
+        console.error('error: ', error);
+    }
+    );
+}
 function fireConfetti() {
-    var count = 200;
+    playConfettiSound();
+    var count = 400;
     var defaults = {
         origin: { y: 0.7 }
     };
